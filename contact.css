@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  margin-top: 40px;
+  font-size: 36px;
+  color: #4b0082;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+nav {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  width: 100%;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffeb3b;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffeb3b;
+}
+.contact-container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px 60px;
+  text-align: center;
+  margin-top: 50px;
+  transition: 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-container a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin: 20px 0;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-container a:hover {
+  color: #6a11cb;
+  transform: scale(1.05);
+}
+
+.contact-container h2,
+.contact-container h3,
+.contact-container h4 {
+  margin-bottom: 10px;
+}
+footer {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 15px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .contact-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .contact-container a {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
